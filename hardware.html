@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardware - Video Game Store</title>
+</head>
+<body>
+    <header>
+        <h1>Hardware Products</h1>
+    </header>
+    <main>
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Brand</th>
+            </tr>
+            {% for item in hardware_items %}
+            <tr>
+                <td>{{ item['ID'] }}</td>
+                <td>{{ item['brand'] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </main>
+    <footer>
+        <p>Check out our latest hardware products!</p>
+    </footer>
+</body>
+</html>

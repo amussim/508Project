@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DLC - Video Game Store</title>
+</head>
+<body>
+    <header>
+        <h1>Available DLC</h1>
+    </header>
+    <main>
+        <table border="1">
+            <tr>
+                <th>DLC ID</th>
+                <th>Price</th>
+            </tr>
+            {% for dlc in dlcs %}
+            <tr>
+                <td>{{ dlc['dlc_id'] }}</td>
+                <td>${{ "%.2f"|format(dlc['price']) }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </main>
+    <footer>
+        <p>Explore our exciting downloadable content!</p>
+    </footer>
+</body>
+</html>

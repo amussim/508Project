@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Games - Video Game Store</title>
+</head>
+<body>
+    <header>
+        <h1>Video Games</h1>
+    </header>
+    <main>
+        <table border="1">
+            <tr>
+                <th>Product ID</th>
+                <th>Age Rating</th>
+                <th>Genre</th>
+            </tr>
+            {% for game in videogames %}
+            <tr>
+                <td>{{ game['product_id'] }}</td>
+                <td>{{ game['age_rating'] }}</td>
+                <td>{{ game['genre'] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </main>
+    <footer>
+        <p>Explore our extensive range of video games!</p>
+    </footer>
+</body>
+</html>
